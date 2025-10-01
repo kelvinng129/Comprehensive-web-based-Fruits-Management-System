@@ -1,0 +1,105 @@
+/* Borrowing System CSS */
+
+/* Status colors */
+.badge-pending {
+    background-color: #ffc107;
+    color: #212529;
+}
+
+.badge-approved {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.badge-rejected {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.badge-borrowed {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.badge-returned {
+    background-color: #17a2b8;
+    color: #fff;
+}
+
+.badge-overdue {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.badge-partial {
+    background-color: #6c757d;
+    color: #fff;
+}
+
+/* Background variations */
+.bg-danger-light {
+    background-color: rgba(220, 53, 69, 0.1);
+}
+
+/* Table styling */
+.table-hover tbody tr:hover {
+    background-color: rgba(0, 123, 255, 0.05);
+}
+
+tr.table-danger {
+    background-color: rgba(220, 53, 69, 0.15);
+}
+
+/* Form layout */
+.borrow-quantity {
+    max-width: 100px;
+}
+
+/* Tab navigation */
+.nav-tabs .nav-link {
+    color: #6c757d;
+    font-weight: 500;
+}
+
+.nav-tabs .nav-link.active {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+/* Print styles */
+@media print {
+    .no-print {
+        display: none !important;
+    }
+    
+    .card {
+        border: none !important;
+        box-shadow: none !important;
+    }
+    
+    .card-header {
+        background-color: transparent !important;
+        border-bottom: 1px solid #000 !important;
+    }
+    
+    .badge {
+        border: 1px solid #000 !important;
+        color: #000 !important;
+        background-color: transparent !important;
+    }
+    
+    .table td, .table th {
+        border-color: #000 !important;
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+    .card-body {
+        padding: 1rem;
+    }
+    
+    .table {
+        font-size: 0.9rem;
+    }
+}

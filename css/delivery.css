@@ -1,0 +1,115 @@
+/* Delivery Management Styles */
+
+/* Status Badge Colors */
+.status-badge {
+    font-size: 0.9rem;
+    padding: 5px 8px;
+    border-radius: 4px;
+}
+.status-pending { 
+    background-color: #ffc107; 
+    color: #212529;
+}
+.status-in-transit { 
+    background-color: #0d6efd; 
+    color: white; 
+}
+.status-delivered { 
+    background-color: #198754; 
+    color: white; 
+}
+.status-cancelled { 
+    background-color: #dc3545; 
+    color: white; 
+}
+
+/* Card Styling */
+.delivery-card {
+    transition: transform 0.2s;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+.delivery-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+/* Timeline Styling */
+.timeline {
+    position: relative;
+    padding-left: 30px;
+}
+.timeline-item {
+    position: relative;
+    padding-bottom: 25px;
+}
+.timeline-item:last-child {
+    padding-bottom: 0;
+}
+.timeline-item::before {
+    content: "";
+    width: 2px;
+    height: 100%;
+    background-color: #dee2e6;
+    position: absolute;
+    left: -18px;
+    top: 0;
+}
+.timeline-item:last-child::before {
+    height: 0;
+}
+.timeline-point {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    position: absolute;
+    left: -23px;
+    top: 5px;
+}
+.status-point-pending { background-color: #ffc107; }
+.status-point-in-transit { background-color: #0d6efd; }
+.status-point-delivered { background-color: #198754; }
+.status-point-cancelled { background-color: #dc3545; }
+
+/* Form Styling */
+.required-field::after {
+    content: "*";
+    color: red;
+    margin-left: 4px;
+}
+
+.fruit-item {
+    cursor: pointer;
+    transition: all 0.2s;
+    border-radius: 6px;
+}
+.fruit-item:hover {
+    background-color: #f8f9fa;
+}
+.fruit-item.selected {
+    background-color: #e7f5ff;
+    border: 1px solid #0d6efd;
+}
+
+/* Checkout Summary */
+.checkout-summary {
+    border-left: 4px solid #0d6efd;
+    background-color: #f8f9ff;
+}
+
+/* Checkin Form */
+.item-quantity-match { color: #198754; }
+.item-quantity-mismatch { color: #dc3545; }
+
+/* Tracking Page */
+.tracking-container {
+    max-width: 700px;
+    margin: 0 auto;
+}
+.tracking-search {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+}

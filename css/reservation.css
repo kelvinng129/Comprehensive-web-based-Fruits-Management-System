@@ -1,0 +1,124 @@
+/* Reservation System CSS */
+
+/* Status colors */
+.badge-pending {
+    background-color: #ffc107;
+    color: #212529;
+}
+
+.badge-approved {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.badge-rejected {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.badge-delivered {
+    background-color: #17a2b8;
+    color: #fff;
+}
+
+/* Timeline styling */
+.reservation-timeline {
+    position: relative;
+    margin: 20px 0;
+    padding-left: 30px;
+}
+
+.reservation-timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 15px;
+    width: 2px;
+    background-color: #dee2e6;
+}
+
+.timeline-item {
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.timeline-item:last-child {
+    padding-bottom: 0;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -21px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #dee2e6;
+    border: 2px solid #fff;
+}
+
+.timeline-item.status-pending::before {
+    background-color: #ffc107;
+}
+
+.timeline-item.status-approved::before {
+    background-color: #28a745;
+}
+
+.timeline-item.status-rejected::before {
+    background-color: #dc3545;
+}
+
+.timeline-item.status-delivered::before {
+    background-color: #17a2b8;
+}
+
+/* Form layout */
+.form-inline-action {
+    display: inline-block;
+    margin-left: 5px;
+}
+
+/* Print styles */
+@media print {
+    .no-print {
+        display: none !important;
+    }
+    
+    .card {
+        border: none !important;
+        box-shadow: none !important;
+    }
+    
+    .card-header {
+        background-color: transparent !important;
+        border-bottom: 1px solid #000 !important;
+    }
+    
+    .badge {
+        border: 1px solid #000 !important;
+        color: #000 !important;
+        background-color: transparent !important;
+    }
+    
+    .table td, .table th {
+        border-color: #000 !important;
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+    .card-body {
+        padding: 1rem;
+    }
+    
+    .table {
+        font-size: 0.9rem;
+    }
+    
+    .btn-block {
+        margin-bottom: 0.5rem;
+    }
+}
